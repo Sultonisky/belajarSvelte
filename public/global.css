@@ -1,34 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 html,
 body {
   position: relative;
   width: 100%;
   height: 100%;
+  font-family: 'Inter', 'Roboto', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: #f4f6fb;
+  color: #222;
 }
 
 body {
-  color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
-  color: rgb(0, 100, 200);
+  color: #2563eb;
   text-decoration: none;
+  transition: color 0.2s;
 }
-
 a:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }
-
 a:visited {
-  color: rgb(0, 80, 160);
+  color: #6366f1;
 }
 
 label {
   display: block;
+  font-weight: 500;
+  margin-bottom: 0.25em;
 }
 
 input,
@@ -36,41 +40,57 @@ button,
 select,
 textarea {
   font-family: inherit;
-  font-size: inherit;
-  -webkit-padding: 0.4em 0;
-  padding: 0.4em;
-  margin: 0 0 0.5em 0;
+  font-size: 1rem;
+  padding: 0.6em 0.9em;
+  margin: 0 0 0.7em 0;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
 }
-
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #2563eb22;
+  outline: none;
+}
 input:disabled {
   color: #ccc;
+  background: #f3f4f6;
 }
 
 button {
-  color: #333;
-  background-color: #f4f4f4;
-  outline: none;
+  color: #fff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 #2563eb11;
 }
-
 button:disabled {
   color: #999;
+  background: #e5e7eb;
+  cursor: not-allowed;
 }
-
+button:not(:disabled):hover {
+  background-color: #1d4ed8;
+}
 button:not(:disabled):active {
-  background-color: #ddd;
+  background-color: #1e40af;
 }
-
 button:focus {
-  border-color: #666;
+  border: 1.5px solid #1d4ed8;
 }
 
-/*  EXTRA STYLES */
-body {
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f3f4f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 8px;
 }
